@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zO20bKm1V0UcGQg3e7EmLFl7JS5nqAJQ6vx00UOwZVxhN9L57mezBsTiEGL9X2GnO1pJq6KximqdTX+5Qrj2eg==",
+  "dgSpecHash": "a6dRl97iHh16WhyY14qbWN1FgqWqkusY4r8qBSbtIVw1cCAIUvqYVHj431MRvGmHC5GY+sfN12xhnA8gGk+rBA==",
   "success": true,
-  "projectFilePath": "C:\\src\\GoColis\\GoColis.Shipping.API\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Ayoub\\Source\\Repos\\GoColis.Shipping\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

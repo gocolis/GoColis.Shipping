@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Sissima\\.nuget\\packages\\": {}
+    "C:\\Users\\Ayoub\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\src\\GoColis\\GoColis.Shipping.API\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Ayoub\\Source\\Repos\\GoColis.Shipping\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
       "projectName": "GoColis.Shipping.Domain",
-      "projectPath": "C:\\src\\GoColis\\GoColis.Shipping.API\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
-      "packagesPath": "C:\\Users\\Sissima\\.nuget\\packages\\",
-      "outputPath": "C:\\src\\GoColis\\GoColis.Shipping.API\\GoColis.Shipping.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Ayoub\\Source\\Repos\\GoColis.Shipping\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
+      "packagesPath": "C:\\Users\\Ayoub\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ayoub\\Source\\Repos\\GoColis.Shipping\\GoColis.Shipping.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sissima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ayoub\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,17 +51,11 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

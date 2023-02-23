@@ -1,11 +1,6 @@
-﻿using GoColis.Shpping.Infrastructure;
-using Microsoft.EntityFrameworkCore;
+﻿namespace GoColis.Shpping.Infrastructure;
 
-
-namespace GoColis.Shipping.Domain.Domain.Logistics.Repository;
-
-// TODO: Create abstarct entity
-// public abstract class Repository<TEntity> where TEntity : Entity
+// TODO: Review
 public abstract class Repository<TEntity> where TEntity : Entity
 {
 
@@ -20,25 +15,27 @@ public abstract class Repository<TEntity> where TEntity : Entity
         _dbContext.Add<TEntity>(entity);
         _dbContext.SaveChanges();
     }
+
     public void Update(TEntity entity)
     {
         _dbContext.Entry(entity).State = EntityState.Modified;
         _dbContext.SaveChanges();
     }
-    public List<TEntity> Get()
+
+    public List<TEntity> GetAll()
     {
         return _dbContext.Set<TEntity>().ToList();
     }
 
-    public TEntity GetById(int id)
+    public TEntity Get(int id)
     {
-        return _dbContext.Set<TEntity>().FirstOrDefault(p => p.Id == id);
+        return _dbContext.Set<TEntity>().Find(id);
          
     }
 
-    public void Remove(TEntity entity, int id)
+    public void Remove(int id)
     {
-        _dbContext.Set<TEntity>().FirstOrDefault(e => e.Id == id);
+        _dbContext.Set<TEntity>().Remove(id);
         _dbContext.SaveChanges();
     }
 }
