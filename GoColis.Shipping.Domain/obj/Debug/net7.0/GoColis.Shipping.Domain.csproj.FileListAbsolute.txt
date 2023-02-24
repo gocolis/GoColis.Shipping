@@ -1,0 +1,5 @@
+C:\Users\Ayoub\Source\Repos\GoColis.Shipping\GoColis.Shipping.Domain\obj\Debug\net7.0\GoColis.Shipping.Domain.csproj.AssemblyReference.cache
+C:\Users\Ayoub\Source\Repos\GoColis.Shipping\GoColis.Shipping.Domain\obj\Debug\net7.0\GoColis.Shipping.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ayoub\Source\Repos\GoColis.Shipping\GoColis.Shipping.Domain\obj\Debug\net7.0\GoColis.Shipping.Domain.AssemblyInfoInputs.cache
+C:\Users\Ayoub\Source\Repos\GoColis.Shipping\GoColis.Shipping.Domain\obj\Debug\net7.0\GoColis.Shipping.Domain.AssemblyInfo.cs
+C:\Users\Ayoub\Source\Repos\GoColis.Shipping\GoColis.Shipping.Domain\obj\Debug\net7.0\GoColis.Shipping.Domain.csproj.CoreCompileInputs.cache

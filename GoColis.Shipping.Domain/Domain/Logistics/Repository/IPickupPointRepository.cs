@@ -2,7 +2,7 @@
 
 namespace GoColis.Shipping.Domain.Domain.Logistics.Repository;
 
-public interface IPickupPointRepository : IRepository<PickupPoint>
+public interface IPickupPointRepository : IRepository<Entity>
 {
     
 }
