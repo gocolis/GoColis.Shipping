@@ -1,17 +1,18 @@
-﻿namespace GoColis.Shpping.Infrastructure.Logistics.Entities;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using GoColis.Shipping.Infrastructure.Common;
 
-public class PickupPointEntity: Entity
+namespace GoColis.Shipping.Infrastructure.Logistics.Entities;
+
+public class PickupPointEntity : Entity
 {
-
     [Required]
     [ForeignKey("TransportCompanyEntity")]
     [StringLength(20)]
     public string IdSte { get; set; }
 
-    [Required]
-    [StringLength(200)]
-    public string Adresse { get; set; }
-  
+    [Required] [StringLength(200)] public string Adresse { get; set; }
+
     [Required]
     [Column(TypeName = "decimal(10, 8)")]
     public decimal Latitude { get; set; }
@@ -21,5 +22,4 @@ public class PickupPointEntity: Entity
     public decimal Longitude { get; set; }
 
     public ICollection<Contact> Contacts { get; set; }
-    
 }

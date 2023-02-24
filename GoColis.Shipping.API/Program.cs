@@ -1,5 +1,5 @@
-using GoColis.Shipping.Api.EndPoints.PickupPoint;
-using GoColis.Shpping.Infrastructure;
+using GoColis.Shipping.Api.Logistics.UseCases.CreatePickupPoint;
+using GoColis.Shipping.Infrastructure.Common;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,4 +22,3 @@ app.UseHttpsRedirection();
 app.MapPickupPointEndpoints();
 
 app.Run();
-

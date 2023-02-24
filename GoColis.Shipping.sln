@@ -5,9 +5,9 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoColis.Shipping.Api", "GoColis.Shipping.API\GoColis.Shipping.Api.csproj", "{5B3348EF-ED94-43A1-8C4C-3D62652C6BB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoColis.Shipping.Domain", "GoColis.Shipping.Domain\GoColis.Shipping.Domain.csproj", "{91595803-C833-4365-A220-1BFC07F61A9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoColis.Shipping.Domain", "GoColis.Shipping.Domain\GoColis.Shipping.Domain.csproj", "{91595803-C833-4365-A220-1BFC07F61A9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoColis.Shpping.Infrastructure", "GoColis.Shpping.Infrastructure\GoColis.Shpping.Infrastructure.csproj", "{7B4BF6F2-BB2F-4768-BC11-08810FCB93A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoColis.Shipping.Infrastructure", "GoColis.Shpping.Infrastructure\GoColis.Shipping.Infrastructure.csproj", "{7B4BF6F2-BB2F-4768-BC11-08810FCB93A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

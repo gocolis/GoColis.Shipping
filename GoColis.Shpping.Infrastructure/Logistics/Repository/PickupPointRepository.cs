@@ -1,9 +1,12 @@
-﻿using GoColis.Shpping.Infrastructure.Logistics.Entities;
-using GoColis.Shipping.Domain.Domain.Logistics.Repository;
+﻿using GoColis.Shipping.Domain.Logistics.Repository;
+using GoColis.Shipping.Infrastructure.Common;
+using GoColis.Shipping.Infrastructure.Logistics.Entities;
 
-namespace GoColis.Shpping.Infrastructure.Logistics.Repository
+namespace GoColis.Shipping.Infrastructure.Logistics.Repository;
+
+public class PickupPointRepository : Repository<PickupPointEntity>, IPickupPointRepository<PickupPointEntity>
 {
-    public class PickupPointRepository: Repository<PickupPointEntity>, IPickupPointRepository
+    public PickupPointRepository(DatabaseContext dbContext) : base(dbContext)
     {
     }
 }
