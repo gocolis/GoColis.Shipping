@@ -1,4 +1,4 @@
 ﻿namespace GoColis.Shipping.Domain;
-public record CreatePickupPointCommand(string Name, string Address, string ContactName, string ContactPhone, String GpsCoordionates);
-  
+public record CreatePickupPointCommand(string Id, string IdSte, string Address, decimal Latitude, decimal Longitude, List<Contact> Contacts);
+
 

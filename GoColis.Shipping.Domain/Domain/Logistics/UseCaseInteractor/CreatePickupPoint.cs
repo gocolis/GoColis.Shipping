@@ -20,7 +20,7 @@ namespace GoColis.Shipping.Domain.Domain.Logistics.UseCaseInteractor
 
         public void Handle(CreatePickupPointCommand command)
         {
-           var pickuppoint = PickupPoint.Create(command.Name, command.Address, command.ContactName, command.ContactPhone, command.GpsCoordionates);
+           var pickuppoint = PickupPoint.Create(command.Id, command.IdSte, command.Address, command.Contacts, command.Latitude, command.Longitude);
             _pickupPointRepository.Add(pickuppoint);
             
         }

@@ -10,6 +10,5 @@ namespace GoColis.Shipping.Domain.Domain.Logistics.UseCaseInputPort
     public interface ICreatePickupPoint
     {
         void Handle(CreatePickupPointCommand command);
-
     }
 }
