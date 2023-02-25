@@ -15,20 +15,6 @@ public class PickupPoint
         Longitude = longitude;
     }
 
-    private PickupPoint(Guid id, string idSte, string address, Contact contact, decimal latitude,
-        decimal longitude)
-    {
-        new PickupPoint(id, idSte, address, new List<Contact> {contact}, latitude,
-            longitude);
-    }
-
-    private PickupPoint(string idSte, string address, List<Contact> contacts)
-    {
-        IdSte = idSte;
-        Address = address;
-        Contacts = contacts;
-    }
-
     public Guid Id { get; }
     public string IdSte { get; }
     public string Address { get; }
@@ -36,10 +22,15 @@ public class PickupPoint
     public decimal Latitude { get; }
     public decimal Longitude { get; }
 
-    public static PickupPoint Create(string idSte, string address, Contact contact, decimal latitude,
-        decimal longitude)
+    public static PickupPoint Create(string idSte, string address, decimal latitude,
+        decimal longitude, string firstName, string lastName, string email, string phone, string role)
     {
-        return new PickupPoint(Guid.NewGuid(), idSte, address, contact, latitude, longitude);
-        new CreatePickupPointEvent();
+        var contact = new Contact(firstName,
+            lastName,
+            email,
+            phone,
+            role);
+        return new PickupPoint(Guid.NewGuid(), idSte, address,
+            new List<Contact> {contact}, latitude, longitude);
     }
 }

@@ -1,4 +1,8 @@
-﻿namespace GoColis.Shipping.Api.Logistics.UseCases.CreatePickupPoint;
+﻿
+
+using FluentValidation;
+
+namespace GoColis.Shipping.Api.Logistics.UseCases.CreatePickupPoint;
 
 public record CreatePickupPointRequestViewModel(
     string IdSte,
@@ -11,3 +15,16 @@ public record CreatePickupPointRequestViewModel(
     string Phone,
     string Role
 );
+
+public class CreatePickupPointRequestViewModelValidator : AbstractValidator<CreatePickupPointRequestViewModel>
+{
+    public CreatePickupPointRequestViewModelValidator()
+    {
+        RuleFor(x => x.FirstName).NotNull();
+        RuleFor(x => x.LastName).Length(0, 10);
+        RuleFor(x => x.Email).EmailAddress();
+        RuleFor(x => x.Address).NotEmpty();
+        RuleFor(x => x.Phone).MinimumLength(8);
+
+    }
+}

@@ -1,4 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using GoColis.Shipping.Domain.Logistics.Agregat;
+using GoColis.Shipping.Domain.Logistics.Repository;
+using GoColis.Shipping.Infrastructure.Logistics.Entities;
+using GoColis.Shipping.Infrastructure.Logistics.Repository;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,6 +19,7 @@ public static class Services
                 options.UseSqlite(Path.Combine(Path.GetTempPath(),
                     configuration.GetRequiredSection("SqliteDbFile").Value)));
 
+        services.AddTransient<IPickupPointRepository, PickupPointRepository>();
         // TODO: Add postgres database
         return services;
     }

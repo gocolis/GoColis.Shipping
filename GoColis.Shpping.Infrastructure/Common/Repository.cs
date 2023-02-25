@@ -10,9 +10,9 @@ public abstract class Repository<TEntity> where TEntity : Entity
         _dbContext = dbContext;
     }
 
-    public void Add(TEntity entity)
+    public async Task AddAsync(TEntity entity)
     {
         _dbContext.Add(entity);
-        _dbContext.SaveChanges();
+        await _dbContext.SaveChangesAsync();
     }
 }

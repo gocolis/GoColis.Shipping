@@ -1,36 +1,35 @@
-﻿using GoColis.Shipping.Domain.Common.ValueObjects;
+﻿using FluentResults;
 using GoColis.Shipping.Domain.Logistics.Agregat;
 using GoColis.Shipping.Domain.Logistics.Repository;
-using GoColis.Shipping.Domain.Logistics.UseCaseInputPort;
+using MediatR;
 
 namespace GoColis.Shipping.Domain.Logistics.UseCases.CreatePickupPoint;
 
-internal class CreatePickupPoint : ICreatePickupPoint
+public class CreatePickupPoint : IRequestHandler<CreatePickupPointCommand, Result<Guid>>
 {
-    private readonly UseCaseOutputPort.ICreatePickupPoint _outputPort;
-    private readonly IPickupPointRepository<PickupPoint> _pickupPointRepository;
+    private readonly IPickupPointRepository _pickupPointRepository;
 
-    public CreatePickupPoint(IPickupPointRepository<PickupPoint> pickupPointRepository,
-        UseCaseOutputPort.ICreatePickupPoint outputPort)
+    public CreatePickupPoint(IPickupPointRepository pickupPointRepository)
     {
         _pickupPointRepository = pickupPointRepository;
-        _outputPort = outputPort;
     }
 
-    public async Task<Guid> HandleAsync(CreatePickupPointCommand command)
+    public async Task<Result<Guid>> Handle(CreatePickupPointCommand command, CancellationToken cancellationToken)
     {
         ArgumentNullException.ThrowIfNull(command);
-        var contact = new Contact(command.FirstName,
-            command.LastName,
-            command.Email,
-            command.Phone);
+
 
         var pickupPoint = PickupPoint.Create(command.IdSte,
             command.Address,
-            contact,
             command.Latitude,
-            command.Longitude);
+            command.Longitude,
+            command.FirstName,
+            command.LastName,
+            command.Phone,
+            command.Email,
+            command.Role);
+
         await _pickupPointRepository.AddAsync(pickupPoint);
-        return pickupPoint.Id;
+        return Result.Ok(pickupPoint.Id);
     }
 }
