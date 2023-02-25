@@ -1,18 +1,12 @@
 ﻿namespace GoColis.Shipping.Infrastructure.Common;
 
 // TODO: Review
-public abstract class Repository<TEntity> where TEntity : Entity
+public abstract class Repository
 {
-    private readonly DatabaseContext _dbContext;
+    internal readonly DatabaseContext _dbContext;
 
     public Repository(DatabaseContext dbContext)
     {
         _dbContext = dbContext;
-    }
-
-    public void Add(TEntity entity)
-    {
-        _dbContext.Add(entity);
-        _dbContext.SaveChanges();
     }
 }

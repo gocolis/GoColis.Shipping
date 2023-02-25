@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoColis.Shipping.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoColis.Shipping.Infrastructure", "GoColis.Shpping.Infrastructure\GoColis.Shipping.Infrastructure.csproj", "{7B4BF6F2-BB2F-4768-BC11-08810FCB93A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoColis.Shipping.Application", "GoColis.Shipping.Application\GoColis.Shipping.Application.csproj", "{FFFD491A-AE1F-4C59-8679-9AC8E34FB361}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7B4BF6F2-BB2F-4768-BC11-08810FCB93A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B4BF6F2-BB2F-4768-BC11-08810FCB93A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B4BF6F2-BB2F-4768-BC11-08810FCB93A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFFD491A-AE1F-4C59-8679-9AC8E34FB361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFFD491A-AE1F-4C59-8679-9AC8E34FB361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFFD491A-AE1F-4C59-8679-9AC8E34FB361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFFD491A-AE1F-4C59-8679-9AC8E34FB361}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

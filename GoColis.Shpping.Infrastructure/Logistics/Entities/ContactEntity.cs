@@ -4,7 +4,7 @@ using GoColis.Shipping.Infrastructure.Common;
 
 namespace GoColis.Shipping.Infrastructure.Logistics.Entities;
 
-public class Contact : Entity
+public class ContactEntity : Entity
 {
     public string FirstName { get; set; }
 
@@ -14,10 +14,9 @@ public class Contact : Entity
 
     public string Phone { get; set; }
 
-    public string Role { get; set; }
+    public string? Role { get; set; }
 
     [Required]
     [ForeignKey("PickupPointEntity")]
-    [StringLength(20)]
-    public string PickupPointID { get; set; }
+    public Guid PickupPointID { get; set; }
 }

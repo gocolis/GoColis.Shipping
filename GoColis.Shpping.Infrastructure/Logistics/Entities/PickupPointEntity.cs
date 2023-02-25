@@ -21,5 +21,5 @@ public class PickupPointEntity : Entity
     [Column(TypeName = "decimal(11, 8)")]
     public decimal Longitude { get; set; }
 
-    public ICollection<Contact> Contacts { get; set; }
+    public ICollection<ContactEntity> Contacts { get; set; }
 }

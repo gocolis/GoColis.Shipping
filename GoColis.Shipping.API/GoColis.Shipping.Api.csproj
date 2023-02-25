@@ -7,17 +7,20 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Errors\**" />
+	  <Content Remove="Errors\**" />
+	  <EmbeddedResource Remove="Errors\**" />
+	  <None Remove="Errors\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MediatR" Version="12.0.1" />
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\GoColis.Shipping.Domain\GoColis.Shipping.Domain.csproj" />
-		<ProjectReference Include="..\GoColis.Shpping.Infrastructure\GoColis.Shipping.Infrastructure.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Folder Include="Errors\" />
+	  <ProjectReference Include="..\GoColis.Shipping.Application\GoColis.Shipping.Application.csproj" />
 	</ItemGroup>
 
 </Project>

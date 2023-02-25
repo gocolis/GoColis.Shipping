@@ -7,7 +7,22 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Folder Include="Shipping\" />
+	  <Compile Remove="Logistics\Repository\**" />
+	  <Compile Remove="Logistics\UseCaseInputPort\**" />
+	  <Compile Remove="Logistics\UseCases\**" />
+	  <Compile Remove="Shipping\**" />
+	  <EmbeddedResource Remove="Logistics\Repository\**" />
+	  <EmbeddedResource Remove="Logistics\UseCaseInputPort\**" />
+	  <EmbeddedResource Remove="Logistics\UseCases\**" />
+	  <EmbeddedResource Remove="Shipping\**" />
+	  <None Remove="Logistics\Repository\**" />
+	  <None Remove="Logistics\UseCaseInputPort\**" />
+	  <None Remove="Logistics\UseCases\**" />
+	  <None Remove="Shipping\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Common\IRepository.cs" />
 	</ItemGroup>
 
 </Project>

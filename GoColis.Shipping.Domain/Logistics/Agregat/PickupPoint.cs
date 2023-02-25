@@ -4,6 +4,7 @@ namespace GoColis.Shipping.Domain.Logistics.Agregat;
 
 public class PickupPoint
 {
+    public PickupPoint() { }
     private PickupPoint(Guid id, string idSte, string address, List<Contact> contacts, decimal latitude,
         decimal longitude)
     {
@@ -18,8 +19,12 @@ public class PickupPoint
     private PickupPoint(Guid id, string idSte, string address, Contact contact, decimal latitude,
         decimal longitude)
     {
-        new PickupPoint(id, idSte, address, new List<Contact> {contact}, latitude,
-            longitude);
+        Id = id;
+        IdSte = idSte;
+        Address = address;
+        Contacts = new List<Contact> { contact };
+        Latitude = latitude;
+        Longitude = longitude;
     }
 
     private PickupPoint(string idSte, string address, List<Contact> contacts)
@@ -29,17 +34,15 @@ public class PickupPoint
         Contacts = contacts;
     }
 
-    public Guid Id { get; }
-    public string IdSte { get; }
-    public string Address { get; }
-    public List<Contact> Contacts { get; }
-    public decimal Latitude { get; }
-    public decimal Longitude { get; }
+    public Guid Id { get; set; }
+    public string IdSte { get; set; }
+    public string Address { get; set; }
+    public List<Contact> Contacts { get; set; }
+    public decimal Latitude { get; set; }
+    public decimal Longitude { get; set; }
 
-    public static PickupPoint Create(string idSte, string address, Contact contact, decimal latitude,
-        decimal longitude)
+    public static PickupPoint Create(string idSte, string address, Contact contact, decimal latitude, decimal longitude)
     {
         return new PickupPoint(Guid.NewGuid(), idSte, address, contact, latitude, longitude);
-        new CreatePickupPointEvent();
     }
 }
