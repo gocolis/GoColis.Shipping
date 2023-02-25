@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YKUgQyybuzn6J5/8R/Ee3N4cGxTrdxrf9rsbI2bWaEZ97ZDRPv2Umo7fEFKAbAReDqa247dWVL+p4ClqQsJHJg==",
+  "dgSpecHash": "U1fj+RZ080+hGDOpIAHuyR6oU3NNRBevLpRPw3oWc4d0KGPmLwzmWwhUxEqBuSodTa7/JmDtRE5FMrrJgSClYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aymen\\OneDrive\\Documents\\work\\Expedition\\GoColis.Shipping\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
+  "projectFilePath": "C:\\Developpement\\GoColis\\GoColis.Shipping\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -47,6 +47,9 @@ public class PickupPointRepository : Repository, IPickupPointRepository<PickupPo
 
         var entity =await _dbContext.PickupPoints.Include(x=>x.Contacts).FirstOrDefaultAsync(x => x.Id == id);
 
+        if (entity == null)
+            return default;
+
         return new PickupPoint
         {
             Id = entity.Id,

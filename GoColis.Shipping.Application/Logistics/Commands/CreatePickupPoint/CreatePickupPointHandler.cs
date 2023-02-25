@@ -1,10 +1,11 @@
-﻿using GoColis.Shipping.Domain.Logistics.Agregat;
+﻿using FluentResults;
+using GoColis.Shipping.Domain.Logistics.Agregat;
 using GoColis.Shipping.Infrastructure.Logistics.Repositories;
 using MediatR;
 
 namespace GoColis.Shipping.Application.Logistics.Commands.CreatePickupPoint
 {
-    public class CreatePickupPointHandler : IRequestHandler<CreatePickupPointCommand, Guid>
+    public class CreatePickupPointHandler : IRequestHandler<CreatePickupPointCommand, Result<Guid>>
     {
         private readonly IPickupPointRepository<PickupPoint> _pickupPointRepository;
         public CreatePickupPointHandler(IPickupPointRepository<PickupPoint> pickupPointRepository)
@@ -12,15 +13,14 @@ namespace GoColis.Shipping.Application.Logistics.Commands.CreatePickupPoint
             _pickupPointRepository = pickupPointRepository;
         }
 
-        public async Task<Guid> Handle(CreatePickupPointCommand request, CancellationToken cancellationToken)
+        public async Task<Result<Guid>> Handle(CreatePickupPointCommand request, CancellationToken cancellationToken)
         {
             var pickupPoint = request.CreatePickupPoint();
 
             //TODO: Persist the pickupPoint to database
             await _pickupPointRepository.AddAsync(pickupPoint);
 
-            return pickupPoint.Id;
-
+            return Result.Ok(pickupPoint.Id);
         }
     }
 }

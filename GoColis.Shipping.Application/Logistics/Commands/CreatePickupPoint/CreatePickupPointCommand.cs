@@ -1,9 +1,10 @@
-﻿using GoColis.Shipping.Domain.Logistics.Agregat;
+﻿using FluentResults;
+using GoColis.Shipping.Domain.Logistics.Agregat;
 using MediatR;
 
 namespace GoColis.Shipping.Application.Logistics.Commands.CreatePickupPoint
 {
-    public class CreatePickupPointCommand : IRequest<Guid>
+    public class CreatePickupPointCommand : IRequest<Result<Guid>>
     {
         public CreatePickupPointCommand(
    string idSte,

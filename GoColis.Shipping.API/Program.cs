@@ -1,4 +1,5 @@
 using GoColis.Shipping.Api.Logistics;
+using GoColis.Shipping.Application;
 using GoColis.Shipping.Application.Logistics.Commands.CreatePickupPoint;
 using GoColis.Shipping.Infrastructure.Common;
 
@@ -9,10 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructureServices(builder.Configuration, builder.Environment.IsDevelopment());
 
-builder.Services.AddMediatR(cfg =>
-{
-    cfg.RegisterServicesFromAssembly(System.Reflection.Assembly.GetAssembly(typeof(CreatePickupPointCommand)));
-});
+builder.Services.AddApplicationServices();
 
 builder.Services.AddInfrastructureServices(builder.Configuration, true);
 
