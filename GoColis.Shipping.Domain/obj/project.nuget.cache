@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "H5wueVwOpoJcYouXfImw8F0TOUwdUSG3bXlEnftrWXLuMC8JJw/p0ypvxeJ5jld4vbmCOE2LLIJFySUj5ZAdUQ==",
+  "dgSpecHash": "6gmvQ/psqUAWh4X4Gt3iim4TEtlSMqiP6Fu86JHDy8KrKW7Cg1XneHW22Gege25LHigXItq8pI2ADJbwfjrDag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aymen\\OneDrive\\Documents\\work\\Expedition\\GoColis.Shipping\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Sissima\\source\\repos\\GoColis.Shipping\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\aymen\\.nuget\\packages\\fluentresults\\3.15.2\\fluentresults.3.15.2.nupkg.sha512",
-    "C:\\Users\\aymen\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
-    "C:\\Users\\aymen\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
-    "C:\\Users\\aymen\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\aymen\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\aymen\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.1\\microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
-    "C:\\Users\\aymen\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    "C:\\Users\\Sissima\\.nuget\\packages\\fluentresults\\3.15.2\\fluentresults.3.15.2.nupkg.sha512",
+    "C:\\Users\\Sissima\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\Sissima\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
+    "C:\\Users\\Sissima\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Sissima\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Sissima\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.1\\microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
+    "C:\\Users\\Sissima\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }

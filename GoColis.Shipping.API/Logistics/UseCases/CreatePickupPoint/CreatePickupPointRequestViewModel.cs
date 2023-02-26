@@ -1,6 +1,4 @@
-﻿
-
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace GoColis.Shipping.Api.Logistics.UseCases.CreatePickupPoint;
 

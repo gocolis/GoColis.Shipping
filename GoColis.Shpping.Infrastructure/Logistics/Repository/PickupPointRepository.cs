@@ -5,9 +5,9 @@ using GoColis.Shipping.Infrastructure.Logistics.Entities;
 
 namespace GoColis.Shipping.Infrastructure.Logistics.Repository;
 
-public class PickupPointRepository :  IPickupPointRepository
+public class PickupPointRepository : IPickupPointRepository
 {
-    public PickupPointRepository(DatabaseContext dbContext) 
+    public PickupPointRepository(DatabaseContext dbContext)
     {
     }
 
@@ -16,4 +16,17 @@ public class PickupPointRepository :  IPickupPointRepository
         //throw new NotImplementedException();
         await Task.Delay(200);
     }
+    public async Task UpdateAsync(PickupPoint entity)
+    {
+        //throw new NotImplementedException();
+        await Task.Delay(200);
+    }
+    public async Task RemoveAsync(string id)
+    {
+
+    }
+    /*public async Task <List<PickupPoint>> GetAllAsync()
+    {
+
+    }*/
 }

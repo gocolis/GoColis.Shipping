@@ -6,4 +6,9 @@ namespace GoColis.Shipping.Domain.Logistics.Repository;
 public interface IPickupPointRepository
 {
     Task AddAsync(PickupPoint entity);
+    Task UpdateAsync(PickupPoint entity);
+    Task RemoveAsync(string id);
+
+    //Task<List<PickupPoint>> GetAllAsync();
+
 }

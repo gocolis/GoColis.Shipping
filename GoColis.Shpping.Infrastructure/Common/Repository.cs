@@ -1,4 +1,7 @@
-﻿namespace GoColis.Shipping.Infrastructure.Common;
+﻿using GoColis.Shipping.Domain.Logistics.Agregat;
+using Microsoft.EntityFrameworkCore;
+
+namespace GoColis.Shipping.Infrastructure.Common;
 
 // TODO: Review
 public abstract class Repository<TEntity> where TEntity : Entity
@@ -15,4 +18,18 @@ public abstract class Repository<TEntity> where TEntity : Entity
         _dbContext.Add(entity);
         await _dbContext.SaveChangesAsync();
     }
+    public async Task UpdateAsync(TEntity entity)
+    {
+        _dbContext.Update(entity);
+        await _dbContext.SaveChangesAsync();
+    }
+    public async Task RemoveAsync(Guid id)
+    {
+        _dbContext.Remove(id);
+        await _dbContext.SaveChangesAsync();
+    }
+   /* public async Task<List<PickupPoint>> GetAllAsync()
+    {
+      await  _dbContext();
+    } */
 }

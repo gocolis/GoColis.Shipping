@@ -298,19 +298,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aymen\\.nuget\\packages\\": {}
+    "C:\\Users\\Sissima\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aymen\\OneDrive\\Documents\\work\\Expedition\\GoColis.Shipping\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Sissima\\Source\\Repos\\GoColis.Shipping\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
       "projectName": "GoColis.Shipping.Domain",
-      "projectPath": "C:\\Users\\aymen\\OneDrive\\Documents\\work\\Expedition\\GoColis.Shipping\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
-      "packagesPath": "C:\\Users\\aymen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aymen\\OneDrive\\Documents\\work\\Expedition\\GoColis.Shipping\\GoColis.Shipping.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Sissima\\Source\\Repos\\GoColis.Shipping\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
+      "packagesPath": "C:\\Users\\Sissima\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sissima\\Source\\Repos\\GoColis.Shipping\\GoColis.Shipping.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\aymen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sissima\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
