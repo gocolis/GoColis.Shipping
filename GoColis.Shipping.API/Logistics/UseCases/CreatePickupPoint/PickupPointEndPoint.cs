@@ -5,7 +5,7 @@ namespace GoColis.Shipping.Api.Logistics.UseCases.CreatePickupPoint;
 using FluentResults;
 public static class PickupPointEndPoint
 {
-    public static void MapPickupPointEndpoints(this WebApplication app)
+    public static void MapCreatePickupPointEndpoints(this WebApplication app)
     {
         app.MapPost("/api/pickuppoint",
             async (CreatePickupPointRequestViewModel request, IMediator mediatr) =>

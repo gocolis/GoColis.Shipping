@@ -17,7 +17,7 @@ public class GetAllPickupPoints : IRequestHandler<GetAllPickupPointsCommand, Res
     {
         var pickupPoints = await _pickupPointRepository.GetAllAsync();
 
-        if (pickupPoints == null || pickupPoints.Count = 0)
+        if (pickupPoints == null || pickupPoints.Count == 0)
         {
             return Result.Fail<List<PickupPoint>>("No pickup points found");
         }

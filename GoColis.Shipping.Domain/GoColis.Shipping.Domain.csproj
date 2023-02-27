@@ -7,11 +7,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="Logistics\UseCases\UpdatePickupPoint\NewFile1.txt" />
-	  <None Remove="Logistics\UseCases\UpdatePickupPoint\NewFile2.txt" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Folder Include="Shipping\" />
 	</ItemGroup>
 

@@ -7,7 +7,7 @@ namespace GoColis.Shipping.Api.Logistics.UseCases.RemovePickupPoint;
     {
         public RemovePickupPointRequestViewModelValidator()
         {
-            RuleFor(x => x.pickuppointId).NotEmpty();
+           
         }
     }
 

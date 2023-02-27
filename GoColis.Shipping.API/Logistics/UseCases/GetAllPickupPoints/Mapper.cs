@@ -1,6 +1,5 @@
 ﻿
 using GoColis.Shipping.Api.Logistics.UseCases.GetPickupPoint;
-using GoColis.Shipping.Domain.Logistics.UseCases.GetAllPickupPoints;
 using GoColis.Shipping.Domain.Logistics.UseCases.GetPickupPoint;
 
 namespace GoColis.Shipping.Api.Logistics.UseCases.GetAllPickupPoints;

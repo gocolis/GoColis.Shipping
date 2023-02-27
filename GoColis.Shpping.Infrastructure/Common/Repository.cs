@@ -18,18 +18,13 @@ public abstract class Repository<TEntity> where TEntity : Entity
         _dbContext.Add(entity);
         await _dbContext.SaveChangesAsync();
     }
-    public async Task UpdateAsync(TEntity entity)
-    {
-        _dbContext.Update(entity);
-        await _dbContext.SaveChangesAsync();
-    }
     public async Task RemoveAsync(Guid id)
     {
         _dbContext.Remove(id);
         await _dbContext.SaveChangesAsync();
     }
-   /* public async Task<List<PickupPoint>> GetAllAsync()
+    public async Task<List<TEntity>> GetAllAsync()
     {
-      await  _dbContext();
-    } */
+        return await _dbContext.Set<TEntity>().ToListAsync();
+    }
 }

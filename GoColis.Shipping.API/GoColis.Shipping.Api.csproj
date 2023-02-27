@@ -7,22 +7,17 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="Logistics\UseCases\UpdatePickupPoint\NewFile.txt" />
-	  <None Remove="Logistics\UseCases\UpdatePickupPoint\NewFile1.txt" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\GoColis.Shipping.Domain\GoColis.Shipping.Domain.csproj" />
-		<ProjectReference Include="..\GoColis.Shpping.Infrastructure\GoColis.Shipping.Infrastructure.csproj" />
+		<Folder Include="Errors\" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Errors\" />
+	  <ProjectReference Include="..\GoColis.Shipping.Domain\GoColis.Shipping.Domain.csproj" />
+	  <ProjectReference Include="..\GoColis.Shpping.Infrastructure\GoColis.Shipping.Infrastructure.csproj" />
 	</ItemGroup>
 
 </Project>
