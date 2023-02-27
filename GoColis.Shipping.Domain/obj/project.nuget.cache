@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "U1fj+RZ080+hGDOpIAHuyR6oU3NNRBevLpRPw3oWc4d0KGPmLwzmWwhUxEqBuSodTa7/JmDtRE5FMrrJgSClYg==",
+  "dgSpecHash": "19ckXmUZ3Ko9nVwte1YPdxcNCczhlDK4a9wU0gTdz5Kd/ElTQ2p9TErXCxxZ914lt+NCOn3FPZQT97+rogD4Tw==",
   "success": true,
   "projectFilePath": "C:\\Developpement\\GoColis\\GoColis.Shipping\\GoColis.Shipping.Domain\\GoColis.Shipping.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\benme\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\benme\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\benme\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
+    "C:\\Users\\benme\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\benme\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\benme\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\benme\\.nuget\\packages\\owls.erroror.core\\1.1.0\\owls.erroror.core.1.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,8 +1,8 @@
+using GoColis.Shipping.Domain.Common;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using GoColis.Shipping.Infrastructure.Common;
 
-namespace GoColis.Shipping.Infrastructure.Logistics.Entities;
+namespace GoColis.Shipping.Domain.Logistics.Entities;
 
 public class ContactEntity : Entity
 {

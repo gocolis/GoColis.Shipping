@@ -14,7 +14,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\GoColis.Shipping.Domain\GoColis.Shipping.Domain.csproj" />
+	  <ProjectReference Include="..\GoColis.Shipping.Application\GoColis.Shipping.Application.csproj" />
 	</ItemGroup>
 
 </Project>

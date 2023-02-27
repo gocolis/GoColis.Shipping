@@ -1,6 +1,6 @@
 using GoColis.Shipping.Api.Logistics;
 using GoColis.Shipping.Application;
-using GoColis.Shipping.Application.Logistics.Commands.CreatePickupPoint;
+using GoColis.Shipping.Domain;
 using GoColis.Shipping.Infrastructure.Common;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,8 +11,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructureServices(builder.Configuration, builder.Environment.IsDevelopment());
 
 builder.Services.AddApplicationServices();
-
-builder.Services.AddInfrastructureServices(builder.Configuration, true);
 
 var app = builder.Build();
 

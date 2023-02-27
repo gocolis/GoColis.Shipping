@@ -21,6 +21,7 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\GoColis.Shipping.Application\GoColis.Shipping.Application.csproj" />
+	  <ProjectReference Include="..\GoColis.Shpping.Infrastructure\GoColis.Shipping.Infrastructure.csproj" />
 	</ItemGroup>
 
 </Project>

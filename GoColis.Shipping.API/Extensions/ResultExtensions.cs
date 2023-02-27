@@ -1,23 +1,30 @@
-﻿using System.Net;
+﻿using GoColis.Shipping.Api.Common.Dtos;
+using Owls.ErrorOr.Core;
 
 namespace GoColis.Shipping.Api.Extensions
 {
     public static class ResultExtensions
     {
-        public static IResult OkOrError(this object obj, HttpStatusCode httpStatusCode)
+        internal static IResult ToResult(this Error error, ILogger? logger=null)
         {
-            if (obj == null)
-                return Results.StatusCode((int)httpStatusCode);
+            var dto = ErrorDto.ToDto(error!);
 
-            return Results.Ok(obj);
-        }
+            switch (error.Type)
+            {
+                case ErrorType.NotFound:
+                    return Results.NotFound(dto);
 
-        public static IResult CreatedOrError(this object obj, string location, HttpStatusCode httpStatusCode)
-        {
-            if (obj == null)
-                return Results.StatusCode((int)httpStatusCode);
+                case ErrorType.Validation:
+                case ErrorType.Conflict:
+                    return Results.BadRequest(dto);
 
-            return Results.Created(location, obj);
+                default:
+                case ErrorType.Failure:
+                case ErrorType.Unexpected:
+                case ErrorType.None:
+                    logger?.LogError($"{error.Code}: {error.Description}");
+                    return Results.Problem(detail: error.Description, statusCode: 500);
+            }
         }
     }
 }

@@ -1,26 +1,42 @@
-﻿using FluentResults;
+﻿using FluentValidation;
 using GoColis.Shipping.Domain.Logistics.Agregat;
-using GoColis.Shipping.Infrastructure.Logistics.Repositories;
+using GoColis.Shipping.Application.Logistics.Interfaces;
 using MediatR;
+using Owls.ErrorOr.Core;
+using GoColis.Shipping.Application.Common;
+using AutoMapper;
 
 namespace GoColis.Shipping.Application.Logistics.Commands.CreatePickupPoint
 {
-    public class CreatePickupPointHandler : IRequestHandler<CreatePickupPointCommand, Result<Guid>>
+    public class CreatePickupPointHandler : RequestHandlerBase, IRequestHandler<CreatePickupPointCommand, ErrorOr<Guid>>
     {
         private readonly IPickupPointRepository<PickupPoint> _pickupPointRepository;
-        public CreatePickupPointHandler(IPickupPointRepository<PickupPoint> pickupPointRepository)
+        private readonly IValidator<CreatePickupPointCommand> _validator;
+        public CreatePickupPointHandler(IPickupPointRepository<PickupPoint> pickupPointRepository, IValidator<CreatePickupPointCommand> validator, IMapper mapper):base (mapper)
         {
             _pickupPointRepository = pickupPointRepository;
+            _validator = validator;
         }
 
-        public async Task<Result<Guid>> Handle(CreatePickupPointCommand request, CancellationToken cancellationToken)
+        public async Task<ErrorOr<Guid>> Handle(CreatePickupPointCommand request, CancellationToken cancellationToken)
         {
-            var pickupPoint = request.CreatePickupPoint();
+            var validation = _validator.Validate(request);
 
-            //TODO: Persist the pickupPoint to database
-            await _pickupPointRepository.AddAsync(pickupPoint);
+            if (!validation.IsValid)
+                return ErrorOr.Failure<Guid>(Error.Validation("PickupPoint.Validation", validation.Errors.FirstOrDefault()?.ErrorMessage));
 
-            return Result.Ok(pickupPoint.Id);
+            var pickupPoint = Mapper.Map<PickupPoint>(request);
+
+            try
+            {
+                await _pickupPointRepository.AddAsync(pickupPoint);
+            }
+            catch (Exception ex)
+            {
+                return ErrorOr.Failure<Guid>(Error.Unexpected("PickupPoint.Unexpected", ex.Message));
+            }
+
+            return pickupPoint.Id;
         }
     }
 }

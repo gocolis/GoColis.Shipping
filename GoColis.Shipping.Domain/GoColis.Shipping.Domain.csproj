@@ -7,14 +7,29 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Constantes\**" />
+	  <Compile Remove="Logistics\Commands\**" />
+	  <Compile Remove="Logistics\Dtos\**" />
+	  <Compile Remove="Logistics\Interfaces\**" />
+	  <Compile Remove="Logistics\Queries\**" />
 	  <Compile Remove="Logistics\Repository\**" />
 	  <Compile Remove="Logistics\UseCaseInputPort\**" />
 	  <Compile Remove="Logistics\UseCases\**" />
 	  <Compile Remove="Shipping\**" />
+	  <EmbeddedResource Remove="Constantes\**" />
+	  <EmbeddedResource Remove="Logistics\Commands\**" />
+	  <EmbeddedResource Remove="Logistics\Dtos\**" />
+	  <EmbeddedResource Remove="Logistics\Interfaces\**" />
+	  <EmbeddedResource Remove="Logistics\Queries\**" />
 	  <EmbeddedResource Remove="Logistics\Repository\**" />
 	  <EmbeddedResource Remove="Logistics\UseCaseInputPort\**" />
 	  <EmbeddedResource Remove="Logistics\UseCases\**" />
 	  <EmbeddedResource Remove="Shipping\**" />
+	  <None Remove="Constantes\**" />
+	  <None Remove="Logistics\Commands\**" />
+	  <None Remove="Logistics\Dtos\**" />
+	  <None Remove="Logistics\Interfaces\**" />
+	  <None Remove="Logistics\Queries\**" />
 	  <None Remove="Logistics\Repository\**" />
 	  <None Remove="Logistics\UseCaseInputPort\**" />
 	  <None Remove="Logistics\UseCases\**" />
@@ -22,7 +37,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Remove="Common\IRepository.cs" />
+	  <PackageReference Include="AutoMapper" Version="12.0.1" />
+	  <PackageReference Include="FluentValidation" Version="11.5.1" />
+	  <PackageReference Include="MediatR" Version="12.0.1" />
+	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+	  <PackageReference Include="Owls.ErrorOr.Core" Version="1.1.0" />
 	</ItemGroup>
 
 </Project>

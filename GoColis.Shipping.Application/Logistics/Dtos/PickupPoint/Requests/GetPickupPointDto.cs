@@ -1,11 +1,8 @@
-﻿using GoColis.Shipping.Domain.Logistics.Agregat;
-using MediatR;
-using Owls.ErrorOr.Core;
-
-namespace GoColis.Shipping.Application.Logistics.Commands.CreatePickupPoint
+﻿namespace GoColis.Shipping.Application.Logistics.Dtos.PickupPoint.Requests
 {
-    public class CreatePickupPointCommand : IRequest<ErrorOr<Guid>>
+    public class GetPickupPointDto
     {
+        public Guid Id { get; set; }
         public string IdSte { get; set; }
         public string Address { get; set; }
         public decimal Latitude { get; set; }

@@ -1,7 +1,6 @@
-﻿namespace GoColis.Shipping.Domain.Logistics.Dtos.Responses.PickupPoint
+﻿namespace GoColis.Shipping.Application.Logistics.Dtos.PickupPoint.Responses
 {
-    public record GetPickupPointDto(
-        Guid id,
+    public record CreatePickupPointDto(
         string IdSte,
         string Address,
         decimal Latitude,

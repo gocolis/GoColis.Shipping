@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace GoColis.Shipping.Infrastructure.Common;
+namespace GoColis.Shipping.Domain.Common;
 
 public abstract class Entity
 {

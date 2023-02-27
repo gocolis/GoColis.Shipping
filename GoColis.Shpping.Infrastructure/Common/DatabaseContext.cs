@@ -1,4 +1,4 @@
-﻿using GoColis.Shipping.Infrastructure.Logistics.Entities;
+﻿using GoColis.Shipping.Domain.Logistics.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace GoColis.Shipping.Infrastructure.Common;

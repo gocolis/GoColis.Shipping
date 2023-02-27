@@ -1,4 +1,4 @@
-﻿namespace GoColis.Shipping.Infrastructure.Common;
+﻿namespace GoColis.Shipping.Application.Common;
 
 public interface IRepository<TEntity> where TEntity : class
 {

@@ -1,7 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-using GoColis.Shipping.Infrastructure.Common;
+﻿using GoColis.Shipping.Domain.Common;
+using System.ComponentModel.DataAnnotations;
 
-namespace GoColis.Shipping.Infrastructure.Logistics.Entities;
+namespace GoColis.Shipping.Domain.Logistics.Entities;
 
 internal class TransportCompanyEntity : Entity
 {

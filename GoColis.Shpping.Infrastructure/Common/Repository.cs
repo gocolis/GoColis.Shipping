@@ -1,12 +1,16 @@
-﻿namespace GoColis.Shipping.Infrastructure.Common;
+﻿using AutoMapper;
+
+namespace GoColis.Shipping.Infrastructure.Common;
 
 // TODO: Review
 public abstract class Repository
 {
-    internal readonly DatabaseContext _dbContext;
+    internal readonly DatabaseContext DbContext;
+    internal readonly IMapper Mapper;
 
-    public Repository(DatabaseContext dbContext)
+    public Repository(DatabaseContext dbContext, IMapper mapper)
     {
-        _dbContext = dbContext;
+        DbContext = dbContext;
+        Mapper = mapper;
     }
 }
