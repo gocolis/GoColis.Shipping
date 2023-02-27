@@ -26,8 +26,6 @@ public class PickupPointRepository : Repository, IPickupPointRepository<PickupPo
 
     public async Task<PickupPoint> GetAsync(Guid id)
     {
-        var all = await DbContext.PickupPoints.ToListAsync();
-
         var entity = await DbContext.PickupPoints.Include(x => x.Contacts).FirstOrDefaultAsync(x => x.Id == id);
 
         if (entity == null)

@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GoColis.Shipping.Domain.Logistics.Entities;
 
+[Table("Contacts")]
 public class ContactEntity : Entity
 {
     public string FirstName { get; set; }
@@ -17,6 +18,9 @@ public class ContactEntity : Entity
     public string? Role { get; set; }
 
     [Required]
-    [ForeignKey("PickupPointEntity")]
+    [ForeignKey("PickupPoint_VS_Contact")]
+    [Column("PickupPointID")]
     public Guid PickupPointID { get; set; }
+
+    public PickupPointEntity PickupPoint { get; set; }
 }

@@ -1,13 +1,15 @@
-﻿using GoColis.Shipping.Domain.Logistics.Entities;
+﻿using FluentMigrator.Runner;
+using GoColis.Shipping.Domain.Logistics.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace GoColis.Shipping.Infrastructure.Common;
 
 public class DatabaseContext : DbContext
 {
-    public DatabaseContext(DbContextOptions options) : base(options)
+    public DatabaseContext(DbContextOptions options, IMigrationRunner runner) : base(options)
     {
-        Database.EnsureCreated();
+        runner.ListMigrations();
+        runner.MigrateUp();
     }
 
     public DbSet<ContactEntity> Contacts { get; set; }
@@ -16,15 +18,18 @@ public class DatabaseContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        
-
         modelBuilder.Entity<PickupPointEntity>()
-                    .HasKey(p => p.Id);
+            .HasKey(p => p.Id);
 
         modelBuilder.Entity<ContactEntity>()
-                   .HasKey(p => p.Id);
+                  .HasKey(p => p.Id);
 
-        //Database.EnsureCreated();
+        modelBuilder.Entity<PickupPointEntity>()
+            .HasMany(x=> x.Contacts)
+            .WithOne(x=>x.PickupPoint)
+            .HasForeignKey(x=>x.PickupPointID)
+                  ;
+
 
         base.OnModelCreating(modelBuilder);
     }

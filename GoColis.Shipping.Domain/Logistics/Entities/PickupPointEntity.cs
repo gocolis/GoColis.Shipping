@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GoColis.Shipping.Domain.Logistics.Entities;
 
+[Table("PickupPoints")]
 public class PickupPointEntity : Entity
 {
     [Required]
